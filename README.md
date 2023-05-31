@@ -1,2 +1,2 @@
 # Java
-Some Notes
+## Notes
