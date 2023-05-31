@@ -1,0 +1,29 @@
+Java is known for its strong support for object-oriented programming (OOP) principles. Here are some key object-oriented features in Java:
+
+    Classes and Objects: Java allows you to define classes, which serve as blueprints for creating objects. 
+    Objects are instances of classes that encapsulate data and behavior.
+
+    Encapsulation: Encapsulation is the principle of bundling data and methods together within a class and controlling access to them using access modifiers (public, private, protected).
+
+    Inheritance: Inheritance allows classes to inherit properties and behavior from other classes. 
+    It facilitates code reuse and the creation of hierarchical relationships between classes.
+
+    Polymorphism: Polymorphism allows objects of different classes to be treated as objects of a common superclass. 
+    It enables the use of different implementations of methods based on the type of object at runtime.
+
+    Abstraction: Abstraction focuses on defining the essential characteristics of an object and hiding unnecessary implementation details. 
+    Abstract classes and interfaces are used to achieve abstraction in Java.
+
+    Interfaces: Interfaces provide a contract that specifies a set of methods that a class must implement. 
+    They enable multiple inheritance-like behavior and support the concept of "programming to an interface."
+
+    Overloading: Overloading allows the definition of multiple methods with the same name but different parameters in a class. 
+    The appropriate method is selected based on the arguments provided during method invocation.
+
+    Overriding: Overriding involves providing a different implementation for a method in a subclass that is already defined in its superclass. 
+    It allows for customization of behavior inherited from the superclass.
+
+    Polymorphic References: Java supports using a reference of a superclass to refer to an object of any subclass derived from that superclass. 
+    This provides flexibility in designing and working with object hierarchies.
+
+These are some of the key object-oriented features that Java offers, enabling developers to build modular, maintainable, and reusable code.
