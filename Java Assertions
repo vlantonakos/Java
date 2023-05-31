@@ -1,0 +1,28 @@
+An assertion allows testing the correctness of any assumptions that have been made in the program. 
+An assertion is achieved using the assert statement in Java. While executing assertion, it is believed to be true. 
+If it fails, JVM throws an error named AssertionError. 
+It is mainly used for testing purposes during development.
+
+Why use Assertions 
+
+Wherever a programmer wants to see if his/her assumptions are wrong or not. 
+
+    To make sure that an unreachable-looking code is actually unreachable.
+    To make sure that assumptions written in comments are right.
+    To make sure the default switch case is not reached.
+    To check the object’s state.
+    At the beginning of the method
+    After method invocation.
+    
+Where to use Assertions  
+
+    Arguments to private methods. Private arguments are provided by the developer’s code only and the developer may want to check his/her assumptions about arguments.
+    Conditional cases.
+    Conditions at the beginning of any method.
+
+Where not to use Assertions  
+
+    Assertions should not be used to replace error messages
+    Assertions should not be used to check arguments in the public methods as they may be provided by the user. Error handling should be used to handle errors provided by users.
+    Assertions should not be used on command line arguments.
+    
