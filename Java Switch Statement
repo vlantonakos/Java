@@ -1,0 +1,181 @@
+public class SwitchMonthExample {    
+public static void main(String[] args) {    
+    //Specifying month number  
+    int month=7;    
+    String monthString="";  
+    //Switch statement  
+    switch(month){    
+    //case statements within the switch block  
+    case 1: monthString="1 - January";  
+    break;    
+    case 2: monthString="2 - February";  
+    break;    
+    case 3: monthString="3 - March";  
+    break;    
+    case 4: monthString="4 - April";  
+    break;    
+    case 5: monthString="5 - May";  
+    break;    
+    case 6: monthString="6 - June";  
+    break;    
+    case 7: monthString="7 - July";  
+    break;    
+    case 8: monthString="8 - August";  
+    break;    
+    case 9: monthString="9 - September";  
+    break;    
+    case 10: monthString="10 - October";  
+    break;    
+    case 11: monthString="11 - November";  
+    break;    
+    case 12: monthString="12 - December";  
+    break;    
+    default:System.out.println("Invalid Month!");    
+    }    
+    //Printing month of the given number  
+    System.out.println(monthString);  
+}    
+}   
+
+OUTPUT:
+7 - July
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java Switch Statement is fall-through
+  That means it executes all statements after the first match if a break statement is not present.
+
+//Java Switch Example where we are omitting the  
+//break statement  
+public class SwitchExample2 {  
+public static void main(String[] args) {  
+    int number=20;  
+    //switch expression with int value  
+    switch(number){  
+    //switch cases without break statements  
+    case 10: System.out.println("10");  
+    case 20: System.out.println("20");  
+    case 30: System.out.println("30");  
+    default:System.out.println("Not in 10, 20 or 30");  
+    }  
+}  
+} 
+
+OUTPUT:
+20
+30
+Not in 10, 20 or 30
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java Nested Switch Statement
+
+We can use switch statement inside other switch statement in Java. It is known as nested switch statement.
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	
+    public static void main(String args[])  
+    {  
+    //C - CSE, E - ECE, M - Mechanical  
+      char branch = 'C';                 
+      int collegeYear = 4;  
+      switch( collegeYear )  
+      {  
+          case 1:  
+              System.out.println("English, Maths, Science");  
+              break;  
+          case 2:  
+              switch( branch )   
+              {  
+                  case 'C':  
+                      System.out.println("Operating System, Java, Data Structure");  
+                      break;  
+                  case 'E':  
+                      System.out.println("Micro processors, Logic switching theory");  
+                      break;  
+                  case 'M':  
+                      System.out.println("Drawing, Manufacturing Machines");  
+                      break;  
+              }  
+              break;  
+          case 3:  
+              switch( branch )   
+              {  
+                  case 'C':  
+                      System.out.println("Computer Organization, MultiMedia");  
+                      break;  
+                  case 'E':  
+                      System.out.println("Fundamentals of Logic Design, Microelectronics");  
+                      break;  
+                  case 'M':  
+                      System.out.println("Internal Combustion Engines, Mechanical Vibration");  
+                      break;  
+              }  
+              break;  
+          case 4:  
+              switch( branch )   
+              {  
+                  case 'C':  
+                      System.out.println("Data Communication and Networks, MultiMedia");  
+                      break;  
+                  case 'E':  
+                      System.out.println("Embedded System, Image Processing");  
+                      break;  
+                  case 'M':  
+                      System.out.println("Production Technology, Thermal Engineering");  
+                      break;  
+              }  
+              break;  
+      }  
+  } 
+}
+
+OUTPUT:
+Data Communication and Networks, MultiMedia
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java Enum in Switch Statement
+
+public class Main {
+	
+	public enum Day {  Sun, Mon, Tue, Wed, Thu, Fri, Sat  }    
+    public static void main(String args[])    
+    {    
+      Day[] DayNow = Day.values();    
+        for (Day Now : DayNow)    
+        {    
+             switch (Now)    
+             {    
+                 case Sun:    
+                     System.out.println("Sunday");    
+                     break;    
+                 case Mon:    
+                     System.out.println("Monday");    
+                     break;    
+                 case Tue:    
+                     System.out.println("Tuesday");    
+                     break;         
+                 case Wed:    
+                     System.out.println("Wednesday");    
+                     break;    
+                 case Thu:    
+                     System.out.println("Thursday");    
+                     break;    
+                 case Fri:    
+                     System.out.println("Friday");    
+                     break;    
+                 case Sat:    
+                     System.out.println("Saturday");    
+                     break;    
+             }    
+         }    
+     }     
+}
+
+OUTPUT:
+Sunday
+Monday
+Twesday
+Wednesday
+Thursday
+Friday
+Saturday
+
