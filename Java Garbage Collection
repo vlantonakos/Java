@@ -1,0 +1,37 @@
+Garbage collection in Java is the automated process of deleting code that’s no longer needed or used. 
+This automatically frees up memory space and ideally makes coding Java apps easier for developers.  
+
+How does garbage collection work in Java?
+  During the garbage collection process, the collector scans different parts of the heap, looking for objects that are no longer in use. 
+  If an object no longer has any references to it from elsewhere in the application, the collector removes the object, freeing up memory in the heap. 
+  This process continues until all unused objects are successfully reclaimed.
+  
+Serial garbage collector
+  The serial garbage collector is typically used for smaller, single-threaded environments.
+Parallel garbage collector
+  The parallel garbage collector is JVM’s default garbage collector. 
+  As the name implies this garbage collector uses multiple (parallel) threads.
+Concurrent mark-and-sweep (CMS) collector
+  Like the parallel garbage collector, the concurrent mark-and-sweep collector uses multiple threads.
+Garbage first (G1) garbage collector
+  The G1 garbage collector takes a different approach altogether. Instead of collecting the young and old generations separately, it can collect both at once by splitting the heap into many spaces
+  
+Why Does a Programmer need to Understand Garbage Collection?
+  Besides the basic mechanisms of garbage collection, one of the most important points to understand about garbage collection in Java is that it is non-deterministic, and there is no way to predict when garbage collection will occur at run time. It is possible to include a hint in the code to run the garbage collector with the System.gc()  or Runtime.getRuntime().gc()  methods, but they provide no guarantee that the garbage collector will actually run.
+  
+
+public class TestGarbage1{
+
+ public void finalize(){System.out.println("object is garbage collected");}
+
+ public static void main(String args[]){
+  TestGarbage1 s1=new TestGarbage1();
+  TestGarbage1 s2=new TestGarbage1();
+  s1=null;
+  s2=null;
+  System.gc();
+ }
+}
+OUTPUT:
+    object is garbage collected
+    object is garbage collected
