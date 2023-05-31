@@ -1,0 +1,27 @@
+Points to remember
+
+    The byte range lies between -128 to 127 (inclusive).
+    Its default value is 0.
+    It is useful to handle the st
+    ream of data from a network or file.
+    It is also useful for saving memory in large arrays.
+    It can be used in place of the int data type.
+    
+public class Main {
+    byte age=18;  
+    
+    public byte display()  
+    {  
+        return age;  
+    }  
+    
+	public static void main(String[] args) {  
+		  
+		Main b=new Main();  
+        
+		System.out.println("The age must be: "+b.display());  
+    }       
+}
+
+OUTPUT:
+The age must be: 18
