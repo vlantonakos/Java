@@ -1,0 +1,96 @@
+What are the features of Java Programming Language?
+  Simple: If you know C++ already, it will easier for you to write a program because Java syntax is fully based on C++ which makes easier to learn.
+  Object–Oriented: Java is not fully object-oriented but it is to the extent and works on an object-oriented paradigm which allows managing the code with the help of objects.
+  Portable: Java works on the principle of read-once-write anywhere approach which can be executed in every machine.
+  Platform Independent: Java doesn’t depend upon the operating system to execute the code as it comes with its own platform where its code is executed.
+  Secured: Java doesn’t use any pointers it has its own mechanism of handling memory management and with perfect authorization process then only it gives access to the data to the program. Also, it uses the concept of Byte Code and Exception handling which makes it more secured.
+  Robust: The concepts like Automatic garbage collection, Exception handling, etc. make it more robust because it uses strong memory management mechanism.
+  Distributed: Java is distributed because it helps users to create distributed applications in Java. For creating distributed RMI and EJB are used by which we can access files by calling the methods from any machine on the internet.
+  Dynamic: Java is a dynamic programming language. It supports dynamic loading of classes which means classes are loaded on demand.
+
+What is the final Keyword in Java?
+   Final keyword is used with the class to make sure that any other class can’t extend it. For example String class is final and we can‘t extend it. 
+   Final keyword is also used with different methods so that it can’t be overridden by any child classes.
+
+What are the access modifiers in Java?
+  Public: The classes, methods, variables, and other members who are defined as public, can be accessed by any class or method.
+  Protected: As it sounds, it has special characteristics. Classes or methods that are defined as protected can be accessed by the class of the same package, or by the sub-class of the parent class, or within the same class.
+  Default: Default is accessible within the package only. All the classes, methods, and variables are of default when the public, protected, or private are not used.
+  Private: Classes, methods, and variables which are defined as private can be accessed within the class only.
+
+What is JDBC API and when do we use it?
+  Java DataBase connectivity API allows us t work with the relational database in java programming. 
+  JDBC API classes and interfaces are the part of java.sql and javax.sql package. It is used for getting the database connection, run SQL queries and stored procedures in the database server and process the results.
+  JDBC API is designed in a way which allows loose coupling between our java program and actual JDBC drivers which makes our life easier from switching one database server to another.
+  
+What is the difference between JDK, JRE, and JVM?
+  JVM
+  JVM is an acronym for Java Virtual Machine; it is an abstract machine which provides the runtime environment in which Java bytecode can be executed. 
+  It is a specification which specifies the working of Java Virtual Machine. Its implementation has been provided by Oracle and other companies. Its implementation is known as JRE.
+  JVMs are available for many hardware and software platforms (so JVM is platform dependent). It is a runtime instance which is created when we run the Java class. 
+  There are three notions of the JVM: specification, implementation, and instance. 
+  
+  JRE
+  JRE stands for Java Runtime Environment. It is the implementation of JVM. The Java Runtime Environment is a set of software tools which are used for developing Java applications. 
+  It is used to provide the runtime environment. It is the implementation of JVM. It physically exists. It contains a set of libraries + other files that JVM uses at runtime.
+  
+  JDK
+  JDK is an acronym for Java Development Kit. It is a software development environment which is used to develop Java applications and applets. 
+  It physically exists. It contains JRE + development tools. 
+  JDK is an implementation of any one of the below given Java Platforms released by Oracle Corporation:
+    Standard Edition Java Platform
+    Enterprise Edition Java Platform
+    Micro Edition Java Platform
+    
+What is an object?
+  The Object is the real-time entity having some state and behavior. In Java, Object is an instance of the class having the instance variables as the state of the object and the methods as the behavior of the object. 
+  The object of a class can be created by using the new keyword.
+
+What is the constructor?
+  The constructor can be defined as the special type of method that is used to initialize the state of an object. It is invoked when the class is instantiated, and the memory is allocated for the object. 
+  Every time, an object is created using the new keyword, the default constructor of the class is called. 
+  The name of the constructor must be similar to the class name. The constructor must not have an explicit return type.
+  
+How many types of constructors are used in Java?
+   Default Constructor: default constructor is the one which does not accept any value. The default constructor is mainly used to initialize the instance variable with the default values. 
+            It can also be used for performing some useful task on object creation. A default constructor is invoked implicitly by the compiler if there is no constructor defined in the class.
+   Parameterized Constructor: The parameterized constructor is the one which can initialize the instance variables with the given values. 
+            In other words, we can say that the constructors which can accept the arguments are called parameterized constructors.
+            
+What is the final variable?
+  In Java, the final variable is used to restrict the user from updating it. If we initialize the final variable, we can't change its value. 
+  In other words, we can say that the final variable once assigned to a value, can never be changed after that. 
+  The final variable which is not assigned to any value can only be assigned through the class constructor.
+
+What is Spring?
+  Spring is an open source development framework for enterprise Java. 
+  The core features of the Spring Framework can be used in developing any Java application, but there are extensions for building web applications on top of the Java EE platform. 
+  Spring framework targets to make J2EE development easier to use and promote good programming practice by enabling a POJO-based (Plain Old Java Object) programming model.
+  
+What are Spring beans?
+  The objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container. 
+  These beans are created with the configuration metadata that you supply to the container, for example, in the form of XML <bean/> definitions.
+  
+Compare the sleep() and wait() methods in Java
+   sleep() is a blocking operation that keeps a hold on the monitor / lock of the shared object for the specified number of milliseconds.
+   wait(), on the other hand, simply pauses the thread until either (a) the specified number of milliseconds have elapsed or (b) it receives a desired notification from another thread (whichever is first), without keeping a hold on the monitor/lock of the shared object.
+
+What is Controller in Spring MVC framework?
+  Controllers provide access to the application behavior that you typically define through a service interface. 
+  Controllers interpret user input and transform it into a model that is represented to the user by the view. 
+  Spring implements a controller in a very abstract way, which enables you to create a wide variety of controllers.
+
+ArrayList, LinkedList, and Vector are all implementations of the List interface. Which of them is most efficient for adding and removing elements from the list?
+  Of the three, LinkedList is generally going to give you the best performance. Here’s why:
+            ArrayList and Vector each use an array to store the elements of the list. 
+                  As a result, when an element is inserted into (or removed from) the middle of the list, the elements that follow must all be shifted accordingly. 
+            Vector is synchronized, so if a thread-safe implementation is not needed, it is recommended to use ArrayList rather than Vector.
+            LinkedList, on the other hand, is implemented using a doubly linked list. 
+                  As a result, an inserting or removing an element only requires updating the links that immediately precede and follow the element being inserted or removed.
+  
+If one needs a Set, how do you choose between HashSet vs. TreeSet?
+   At first glance, HashSet is superior in almost every way: O(1) add, remove and contains, vs. O(log(N)) for TreeSet.
+   However, TreeSet is indispensable when you wish to maintain order over the inserted elements or query for a range of elements within the set.
+   
+   
+  
