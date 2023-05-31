@@ -1,0 +1,71 @@
+The Java case keyword is a conditional label which is used with the switch statement. 
+It contains a block of code which is executed only when the switch value matches with the case.
+
+A switch statement can contain multiple case labels. Each case label must hold a different value. 
+The case label can contain the break statement that terminates the flow of the execution. 
+
+public class Main {
+	
+	 public static void main(String[] args) {  
+         
+		 String college_name="BIT";  
+	        int department_id=102;  
+	          
+	        switch(college_name)  
+	          
+	        {  
+	        case "BIT":   
+	            System.out.println("BIT");  
+	            switch(department_id)  
+	            {  
+	            case 101:  
+	                System.out.println("Mechanical Department");  
+	                break;  
+	            case 102:  
+	                System.out.println("Computer Department");  
+	                break;  
+	            case 103:  
+	                System.out.println("Civil Department");  
+	                break;  
+	            }  
+	            break;  
+	        case "ITS":  
+	            System.out.println("ITS");  
+	            switch(department_id)  
+	            {  
+	            case 101:  
+	                System.out.println("Mechanical Department");  
+	                break;  
+	            case 102:  
+	                System.out.println("Computer Department");  
+	                break;  
+	            case 103:  
+	                System.out.println("Civil Department");  
+	                break;  
+	            }  
+	            break;  
+	        case "ABS":  
+	            System.out.println("ABS");  
+	            switch(department_id)  
+	            {  
+	            case 101:  
+	                System.out.println("Mechanical Department");  
+	                break;  
+	            case 102:  
+	                System.out.println("Computer Department");  
+	                break;  
+	            case 103:  
+	                System.out.println("Civil Department");  
+	                break;  
+	            }  
+	            break;  
+	      
+	        default :  
+	            System.out.println("default");  
+	        }    
+	    }       
+}
+
+OUTPUT:
+BIT
+Computer Department
